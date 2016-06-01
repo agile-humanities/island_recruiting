@@ -1,0 +1,5 @@
+name = Island Recruiting Customizations
+package = Island Recruiting
+description = Customizations for Island Recruiting Website
+
+core = 7.x

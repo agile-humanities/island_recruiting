@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Defines all the hooks this module implements.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function island_recruiting_menu() {
+  $items = array();
+  $items['welcome'] = array(
+    'title' => 'Welcome',
+    'description' => 'Island Recruiting landing page',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'island_recruiting_splash',
+    'file' => 'includes/island_recruiting_splash.inc',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function island_recruiting_theme($existing, $type, $theme, $path) {
+  return array(
+    'island_recruiting_splash' => array(
+      'template' => 'theme/island_recruiting_splash',
+      'file' => 'theme/theme.inc',
+      'variables' => array(),
+    ),
+  );
+}
