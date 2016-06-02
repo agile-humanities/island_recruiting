@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+#block-system-main-menu ul.menu li 
+{display: inline; margin-right: 15px;}
+
 #about_us_wrapper{
     padding-top: 25px;
     margin-top:-10px;
@@ -9,6 +12,7 @@
 h1{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 48px !important;
+    font-weight: bold !important;;
 }
 p{
     font-family: 'Open Sans', sans-serif;
@@ -43,20 +47,20 @@ p{
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:28px;
-    border:1px solid #18ab29;
+
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    padding:16px 31px;
+    font-family: 'Open Sans', sans-serif;
+    font-size:12px;
+    padding:10px 29px;
     text-decoration:none;
     text-shadow:0px 1px 0px #2f6627;
-    margin-left: 15%;
+    margin-left: 25%;
     margin-bottom: 5%;
 }
 .contact-button:hover {
-    background-color:#5cbf2a;
+    background-color:#025395;
 }
 .contact-button:active {
     position:relative;
@@ -90,7 +94,7 @@ p{
     padding-bottom:1%;
     color:white;
     margin-right:20%;
-    margin-left:20%;
+    margin-left:15.5%;
 }
 .feature_img{
     background-color: #eaeaea;
@@ -117,7 +121,6 @@ p{
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:28px;
-    border:1px solid #18ab29;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
@@ -128,6 +131,9 @@ p{
     text-shadow:0px 1px 0px #2f6627;
     margin-top: 8%;
     margin-bottom: 5%;
+}
+.signup-button:hover {
+    background-color:#025395;
 }
 
 #questions {

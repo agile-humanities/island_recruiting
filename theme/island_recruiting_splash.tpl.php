@@ -18,7 +18,7 @@
 
     <div id = 'about_us_wrapper'>
         <div id = 'about_us'>
-            <h1>About Us</h1>
+            <h1>ABOUT US</h1>
             <?php print $mac; ?>
             <p class = 'leadin'>Bacon ipsum dolor amet labore ham hock dolore ad, tri-tip spare ribs commodo meatloaf minim sed tongue. Dolore alcatra shoulder aliqua landjaeger.</p>
             <p> Shank deserunt commodo, shankle turducken doner sausage occaecat exercitation. Pastrami tongue chuck commodo duis non filet mignon boudin.

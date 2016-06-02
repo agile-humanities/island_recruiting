@@ -11,7 +11,7 @@
 function island_recruiting_menu() {
   $items = array();
   $items['welcome'] = array(
-    'title' => 'Welcome',
+    'title' => ' ',
     'description' => 'Island Recruiting landing page',
     'type' => MENU_CALLBACK,
     'page callback' => 'island_recruiting_splash',
