@@ -21,7 +21,6 @@ function island_recruiting_menu() {
   return $items;
 }
 
-
 /**
  * Implements hook_theme().
  */
@@ -34,3 +33,27 @@ function island_recruiting_theme($existing, $type, $theme, $path) {
     ),
   );
 }
+
+/**
+ * Logs user in programatically
+ *
+ * @param string $username
+ *   User's name
+ * @param string $password
+ *   User's password
+ *
+ * @return boolean
+ *   Success or failure
+ */
+function island_recruiting_user_login_credentials($username, $password) {
+  if ($uid = user_authenticate($username, $password)) {
+    $form = array();
+    $form_state = array('uid' => $uid);
+    user_login_submit($form, $form_state);
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+

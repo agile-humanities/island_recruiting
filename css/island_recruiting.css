@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
-#block-system-main-menu ul.menu li 
-{display: inline; margin-right: 15px;}
+
+#branding {
+    display:none;
+}
 
 #about_us_wrapper{
     padding-top: 25px;
@@ -12,18 +14,18 @@
 h1{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 48px !important;
-    font-weight: bold !important;;
+    font-weight: bold !important;
+    color:#25365D;
 }
 p{
     font-family: 'Open Sans', sans-serif;
 }
 #about_us{
     padding-top: 3%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
     margin-bottom: 25px;
     background-color: #eaeaea;
-    overflow: auto;
+    width:80%;
     position: relative;
 }
 .splash_img{
@@ -31,10 +33,12 @@ p{
 }
 
 .macbook_img{
-    margin-top: 7%;
-    width:50%; 
-    float:right;
 
+    float:right;
+    shape-outside: url(../assets/Macbook.png);
+    shape-image-threshold: 0.5;
+    shape-margin: 10%;
+    margin-bottom:10%;
 }
 
 .leadin {
@@ -47,17 +51,18 @@ p{
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:28px;
-
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
     font-family: 'Open Sans', sans-serif;
     font-size:12px;
+    font-weight: bold !important;
     padding:10px 29px;
     text-decoration:none;
     text-shadow:0px 1px 0px #2f6627;
-    margin-left: 25%;
+    margin-left: 10%;
     margin-bottom: 5%;
+    margin-top:2%;
 }
 .contact-button:hover {
     background-color:#025395;
@@ -68,11 +73,13 @@ p{
 }
 .service {
     padding-top:5%;
+    padding-bottom:5%;
     width: 33%;
     float: left;
     text-align: center;
 
 }
+
 .service_img {
     display: block;
     margin-left: auto;
@@ -83,6 +90,7 @@ p{
 .about_text {
     margin-right:20%;
     margin-left:20%;
+    text-align:justify;
 }
 #page_title {
     text-align: center;
@@ -116,8 +124,9 @@ p{
     width: 40%;
 }
 
-.signup-button {
-    background-color:#233047;
+.signup-button, #edit-submit {
+    background-image:none !important;
+    background-color:#233047 !important;
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:28px;
@@ -155,4 +164,64 @@ p{
 }
 .greeting{
     margin:5%;
+}
+#ir_logo {
+    padding-left:12%;
+    padding-bottom :2%;
+    float:left;
+}
+#ir_menu{
+    font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+    float:right;
+    padding-right:6%;
+    white-space: nowrap;
+
+}
+#ir_menu a{
+    padding-right:3%;
+    color:#25365D;
+    text-decoration: none;
+    cursor: auto;
+}
+#questions h1{
+    color:white;
+}
+#page {
+    padding: 20px 0 40px 0; 
+    margin-right: 0px !important; 
+    margin-left: 0px !important; 
+    background: #fff;
+    position: relative;
+    color: #333;
+}
+
+p.headline{
+    color:#25365D;
+    padding-top:2%;
+    font-weight: bold !important;
+}
+
+#edit-address{
+    color:#25365D;
+    font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+    background: #F1F1F1 url(/sites/all/modules/island_recruiting/assets/envelope.png) no-repeat;
+    background-position: 15px 6px !important;
+    padding: 15px 10px 15px 70px;
+    width: 270px;
+    border: 1px solid #CCC;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 30px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #CCC inset, 0 1px 0 #FFF;
+    box-shadow: 0 1px 1px #CCC inset, 0 1px 0 #FFF;
+}
+#edit-address:focus {
+
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #25365d inset;
+    -webkit-box-shadow: 0 0 0 1px #25365D inset;
+    box-shadow: 0 0 0 1px #25365D inset;
 }

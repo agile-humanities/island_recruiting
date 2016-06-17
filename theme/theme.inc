@@ -9,18 +9,33 @@
  * Implements hook_preprocess_theme().
  */
 function island_recruiting_preprocess_island_recruiting_splash(array &$variables) {
+  module_load_include('inc', 'island_recruiting', 'includes/forms');
   $path = drupal_get_path('module', 'island_recruiting');
   drupal_add_css("$path/css/island_recruiting.css");
   drupal_add_js("$path/js/island_recruiting.js");
+  global $user;
+  global $base_path;
+  if (!$user->uid) {
+    $login_link = "<a href='" . $base_path . "user/login' >" . t("LOG IN / REGISTER") . "</a>";
+  }
+  else {
+    $login_link = l(t("LOG OUT"), "user/logout");
+  }
+  $variables['login_link'] = $login_link;
+  $variables['logo'] = theme('image', array(
+    'path' => $path . '/assets/new_logo.png',
+    'alt' => t('Welcome!'),
+    'attributes' => array('class' => 'splash_logo'),
+  ));
   $variables['splash'] = theme('image', array(
-    'path' => $path . '/assets/banner1.png',
+    'path' => $path . '/assets/banner.png',
     'alt' => t('Welcome!'),
     'attributes' => array('class' => 'splash_img'),
   ));
   $variables['mac'] = theme('image', array(
     'path' => $path . '/assets/Macbook.png',
     'alt' => t('Welcome!'),
-    'attributes' => array('class' => 'macbook_img', 'style' => 'width:50%; float:right'),
+    'attributes' => array('class' => 'macbook_img', 'style' => 'width:60%; float:right'),
   ));
   $variables['analysis'] = theme('image', array(
     'path' => $path . '/assets/analysis.png',
@@ -38,7 +53,7 @@ function island_recruiting_preprocess_island_recruiting_splash(array &$variables
     'attributes' => array('class' => 'service_img'),
   ));
   $variables['features'] = theme('image', array(
-    'path' => $path . '/assets/bannerfeatures.png',
+    'path' => $path . '/assets/banner_features.png',
     'alt' => t('Features!'),
     'attributes' => array('class' => 'feature_img'),
   ));
@@ -63,8 +78,10 @@ function island_recruiting_preprocess_island_recruiting_splash(array &$variables
     'attributes' => array('class' => ''),
   ));
   $variables['envelope'] = theme('image', array(
-    'path' => $path . '/assets/envelope.png',
+    'path' => $path . '/assets/envelope1.png',
     'alt' => t('Email'),
-    'attributes' => array('width' => '3%','class' => 'envelope_icon'),
+    'attributes' => array('width' => '3%', 'class' => 'envelope_icon'),
   ));
+  $form = drupal_get_form('island_recruiting_email_form');
+  $variables['email_form'] = drupal_render($form);
 }
